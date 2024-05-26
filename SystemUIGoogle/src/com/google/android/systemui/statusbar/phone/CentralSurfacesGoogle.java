@@ -133,6 +133,7 @@ import com.android.systemui.statusbar.policy.UserInfoControllerImpl;
 import com.android.systemui.statusbar.policy.UserSwitcherController;
 import com.android.systemui.statusbar.window.StatusBarWindowController;
 import com.android.systemui.statusbar.window.StatusBarWindowStateController;
+import com.android.systemui.tuner.TunerService;
 import com.android.systemui.util.kotlin.JavaAdapter;
 import com.android.systemui.util.WallpaperController;
 import com.android.systemui.util.concurrency.DelayableExecutor;
@@ -286,6 +287,7 @@ public class CentralSurfacesGoogle extends CentralSurfacesImpl {
             Optional<ReverseChargingViewController> reverseChargingViewControllerOptional,
             WallpaperNotifier wallpaperNotifier,
             SmartSpaceController smartSpaceController,
+            TunerService tunerService,
             BurnInProtectionController burnInProtectionController
     ) {
         super(context, notificationsController, fragmentService, lightBarController, autoHideController, statusBarInitializer, 
@@ -306,7 +308,7 @@ public class CentralSurfacesGoogle extends CentralSurfacesImpl {
                 screenOffAnimationController, wallpaperController, statusBarHideIconsForBouncerManager, lockscreenShadeTransitionController, featureFlags,
                 keyguardUnlockAnimationController, mainHandler, delayableExecutor, messageRouter, wallpaperManager, startingSurfaceOptional, activityLaunchAnimator, jankMonitor, 
                 deviceStateManager, wiredChargingRippleController, dreamManager, cameraLauncherLazy, lightRevealScrimViewModelLazy, lightRevealScrim, 
-                alternateBouncerInteractor, userTracker, fingerprintManager, activityStarter, sceneContainerFlags, burnInProtectionController);
+                alternateBouncerInteractor, userTracker, fingerprintManager, activityStarter, sceneContainerFlags, burnInProtectionController, tunerService);
         mContext = context;
         mBatteryStateChangeCallback = new BatteryController.BatteryStateChangeCallback() {
             @Override
