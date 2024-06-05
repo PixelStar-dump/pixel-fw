@@ -292,9 +292,8 @@ public class CentralSurfacesGoogle extends CentralSurfacesImpl {
             SmartSpaceController smartSpaceController,
             TunerService tunerService,
             BurnInProtectionController burnInProtectionController,
-            DockObserver dockObserver,
-    ) {
-        super(context, notificationsController, fragmentService, lightBarController, autoHideController, statusBarInitializer,
+            DockObserver dockObserver) {
+            super(context, notificationsController, fragmentService, lightBarController, autoHideController, statusBarInitializer,
                 statusBarWindowController, statusBarWindowStateController, statusBarModeRepository, keyguardUpdateMonitor,
                 statusBarSignalPolicy, pulseExpansionHandler, notificationWakeUpCoordinator, keyguardBypassController, keyguardStateController, 
                 headsUpManager, dynamicPrivacyController, falsingManager, falsingCollector, broadcastDispatcher, notificationGutsManager, 
